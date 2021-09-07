@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/eb1cd6de90.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image" sizes="16x16">
+    <title>SQL query generator</title>
+</head>
+<body>
+    <header>
+        <img src="logo.PNG" class="logo">
+        <p style="font-family: 'Roboto', sans-serif; display: flex;" class="header">
+            <a href="https://github.com/jashjasani"><i class="fab fa-github "></i></a>
+            <a href="https://www.linkedin.com/in/jashjasani/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/jash_jasani/"><i class="fab fa-instagram"></i></a>
+        </p>
+    </header>
+    <div>
+        <p>Workspace</p>
+        <br>
+        <br>
+            <label for="tablename" id="tablename"><b>Table Name : </b></label>
+            <input type="text" name="tablename">
+        
+            <table id="sql">
+                <tr style="min-width: 529px;">
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Length</th>
+                    <th>Action</th>
+                </tr>
+                <tr id="1st">
+                    <td><input type="text" name="column" placeholder="Column name" class="column"></td>
+                    <td>
+                        <select class="type">
+                            <option value="INT">INT</option>
+                            <option value="FLOAT">FLOAT</option>
+                            <option value="DOUBLE">DOUBLE</option>
+                            <option value="VARCHAR2">VARCHAR2</option>
+                            <option value="BINARY">BINARY</option>
+                            <option value="DATE">DATE</option>
+                            <option value="BOOLEAN">BOOLEAN</option>
+                        </select>
+                    </td>
+                    <td>
+                    <input type="number" name="length" min="0" max="9999" placeholder="length" class="size">
+                    </td>
+                    <td>
+                        <button onclick="rmClm(this.value)" class="rmbtn" value="1st">
+                            <i class="far fa-trash-alt fa-2x" style="color: rgb(156, 154, 154);"></i>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        
+        <button onclick="btn()" class="add">Add column</button>
+        <button onclick="genCode()" class="gen">
+            Generate code
+        </button>
+    </div>
+    <div>
+        <p>Result : </p>
+        
+        <textarea name="" id="sqlcode" cols="60" rows="15"></textarea>
+        <button class="copy" onclick="cpyClp()"><i class="far fa-copy"> Copy to clipboard</i></button>
+    </div>
+    <footer>
+        <p>&copy 2021 Jash Jasani</p>
+    </footer>
+    <script src="index.js">
+    </script>
+</body>
+</html>

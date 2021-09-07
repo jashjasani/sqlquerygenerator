@@ -1,0 +1,180 @@
+body{
+    background: #FFF8E5;
+    background-image: linear-gradient(to right,#38A3A5,#57CC99);
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+header{
+    background-color: black;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    letter-spacing: 3px;
+    height: max-content;
+    text-align: center;
+}
+.logo{
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 57.5px;
+    width: 182.5px;
+}
+.header{
+    position: absolute;
+    right: 0px;
+    top: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: white;
+    font-size: 35px;
+    font-weight: bolder;
+    float: left;
+}
+p>a{
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+}
+a:hover{
+    color: black;
+    font-size: 45px;
+}
+p{
+    font-size: 20px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+label{
+    font-size: 16px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+input,select{
+    border: 1px solid #ccc;
+    border-radius: 5%;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    size: 50px;
+    outline: none;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+div{
+    margin-top: 130px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 18%), 0 3px 12px 0 rgb(0 0 0 / 15%);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    border: 1px solid #e6e9ed;
+    text-align: center;
+    padding: 10px;
+}
+table,td,th{
+    border:1px solid #ddd;
+    border-collapse: collapse;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    margin-top: 50px;
+    size: 200*200;
+}
+td{
+    padding: 15px;
+    animation: tableRow ease-in-out 1s,rowrm 1s;
+    transition: ease-in-out;
+    
+}
+
+th{
+    font-size: 16px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+.column,.size,.type{
+    background:none;
+    font-size: 14px;
+}
+
+@keyframes tableRow {
+    0% {
+        transform: translateY(-100%)
+      }
+      100% {
+        transform: translateY(0);
+      }
+}
+@keyframes rowrm {
+    100%{
+        transform: translateY(0);
+    }
+    0%{
+        transform: translateY(-100%)
+    }
+}
+textarea{
+    outline: none;
+    border: 2px solid #ccc;
+    resize: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+}
+button.add,button.gen,button.copy{
+    width: 490px;
+    margin-right: auto;
+    margin-left: auto;
+    color: #fff;
+    background-color: #FFB344;
+    border-color: #255625;
+    display: block;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px;
+    font-size: 16px;
+    height: 40px;
+}
+tr{
+    height: 50px;
+}
+button.rmbtn{
+    border: none;
+    background-color: transparent;
+    color: rgb(156, 154, 154);
+}
+button.add:hover{
+    font-size: 20px;
+    background-color: #e0992e;
+}
+button.gen:hover{
+    font-size: 20px;
+    background-color: #e0992e;
+}
+button.copy:hover{
+    font-size: 20px;
+    background-color: #e0992e;
+}
+footer{
+    margin-top: 100px;
+    color: white;
+    text-align: center;
+}
+hr{
+    margin-bottom: 20px;
+    color: #ccc;
+}
