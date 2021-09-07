@@ -27,13 +27,15 @@ header{
     letter-spacing: 3px;
     height: max-content;
     text-align: center;
+    resize: both;
 }
 .logo{
     float: left;
     margin-top: 10px;
     margin-left: 10px;
-    height: 57.5px;
+    height: 57.5;
     width: 182.5px;
+    max-width: 50%;
 }
 .header{
     position: absolute;
@@ -42,7 +44,7 @@ header{
     margin-top: 10px;
     margin-left: 10px;
     color: white;
-    font-size: 35px;
+    font-size: 5vw;
     font-weight: bolder;
     float: left;
 }
@@ -53,7 +55,6 @@ p>a{
 }
 a:hover{
     color: black;
-    font-size: 45px;
 }
 p{
     font-size: 20px;
@@ -88,13 +89,17 @@ div{
 table,td,th{
     border:1px solid #ddd;
     border-collapse: collapse;
+    overflow-x: auto;
 }
+
 table{
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 100%;
+    height: auto;
     margin-top: 50px;
     size: 200*200;
+    overflow-x: auto;
 }
 td{
     padding: 15px;
@@ -136,9 +141,10 @@ textarea{
     margin-left: auto;
     margin-right: auto;
     font-size: 16px;
+    width: auto;
 }
 button.add,button.gen,button.copy{
-    width: 490px;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
     color: #fff;
@@ -180,4 +186,35 @@ footer{
 hr{
     margin-bottom: 20px;
     color: #ccc;
+}
+@media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    div,img{
+      width: 100%;
+    }
+    .header{
+        width: 50vw;
+        font-size: 10vw;
+        position: relative;
+        display: block;
+    }
+    table{
+        display: block;
+    }
+    button{
+        width: 10%;
+    }
+    .logo{
+        display: block;
+        width: 50%;
+        height: 12vw;
+    }
+    body{
+        margin: none;
+        mask-repeat: no-repeat;
+        background-repeat: no-repeat;
+    }
+    textarea{
+        width: 100%;
+    }
 }
