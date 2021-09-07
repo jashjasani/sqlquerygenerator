@@ -36,8 +36,8 @@ function genCode(){
     else{
         for(var i=0;i<=count;i++){
             let columnName=document.getElementsByClassName("column")[i].value;
-            if(columnName==""){
-                alert("Column name cannot be null");
+            if(columnName==""|| columnName.startsWith()){
+                alert("Column name cannot be null or start with a number");
                 break;
             }
             let type=document.getElementsByClassName("type")[i].value;
@@ -47,6 +47,7 @@ function genCode(){
         code=code.slice(0,-1);
         code+=");";
         document.getElementById("sqlcode").value=code;
+        document.getElementById("sqlcode").focus();
     }
 }
 function rmClm(id){
