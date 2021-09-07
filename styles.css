@@ -2,7 +2,6 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: #FFF8E5;
     background-image: linear-gradient(to right,#38A3A5,#57CC99);
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
@@ -197,12 +196,18 @@ hr{
         font-size: 10vw;
         position: relative;
         display: block;
+        margin-right: none;
     }
     table{
         display: block;
     }
     button{
         width: 10%;
+    }
+    html{
+        background-attachment: fixed;
+        background-image: linear-gradient(to right,#38A3A5,#57CC99);
+        size: inherit;
     }
     .logo{
         display: block;
